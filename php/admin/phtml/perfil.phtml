@@ -1,0 +1,16 @@
+            <article class="container">
+                <h2> <?php _H($data["subtitulo"])?> </h2> 
+                <table>
+                    <?php if (!empty($rows)) {?>
+                        <?php foreach($rows as  $row) {?>
+                            <?php foreach($row as  $key=>$val) {?>
+                                <tr><td><?php _H($key); echo(": ") ;_H($val); ?></td></tr>
+                            <?php }?>
+                            <tr>
+                                <td><a href="<?php _H('?modulo=admin&peticion=update_usuario&nombre='.$row["nombre"]);?>" >Modificar</a></td>
+                                <td><a href="<?php _H('?modulo=admin&peticion=delete_usuario&nombre='.$row["nombre"]);?>" >Borrar </a></td>
+                            </tr>
+                        <?php }?>
+                    <?php }?>
+                 </table>
+             </article>

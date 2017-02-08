@@ -1,0 +1,25 @@
+			<article class="container">
+				<h2><?php _H($data["subtitulo"])?></h2>
+				  
+				<table>
+					<?php if (!empty($rows)) {?>
+						<?php foreach ($rows[0] as $key => $value) {?>
+					  		<th><?php _H($key); ?></th>
+					  	<?php }?>
+
+					  	<?php foreach($rows as  $row) {?>
+							<tr>
+								<?php foreach($row as  $key=>$val) {?>
+									<?php if ($key == 'ubicacion'): ?>
+										<td><a target="_blank" href="<?php _H($val); ?>">imagen</a></td>
+									<?php else: ?>
+							        	<td> <?php _H($val); ?></td>
+							        <?php endif; ?>
+						        <?php }?>   
+						        <td><a href="<?php _H('?modulo=admin&peticion=delete_imagen&nombre='.$row["nombre"]);?>" >Borrar </a></td>
+					        </tr>
+					    <?php }?>
+					<?php }?>
+				</table>
+			</article>
+ 

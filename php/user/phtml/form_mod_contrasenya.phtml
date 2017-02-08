@@ -1,0 +1,20 @@
+<article class="container">
+    <h2> <?php _H($data['subtitulo'])?> </h2>
+    <form action="<?php _H($data['action'])?>" method="POST">
+        <fieldset>
+            <label>Contrasenya antigua</label> 
+            <br/>
+            <input type="password" name="contrasenya" class="item_requerid" size="25" maxlength="25" required="required" />
+            <br/>
+            <label>Nueva contraseya</label> 
+            <br/>
+            <input type="password" name="contrasenya_nueva" class="item_requerid" size="25" maxlength="25" required="required" /> 
+            <br/>
+            <label>Repite nueva contrasenya</label> 
+            <br/>
+            <input type="password" name="contrasenya_nueva2" class="item_requerid" size="25" maxlength="25" required="required" /> 
+            <br/>
+        </fieldset>
+        <input type="submit" value="Enviar">      
+    </form>
+</article>

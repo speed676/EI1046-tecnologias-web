@@ -1,0 +1,14 @@
+				<article class="container">
+					<h2>Nuevo chiste</h2>
+ 					<form action="<?php _H($data['action'])?>" method="POST" enctype="multipart/form-data">
+    				<fieldset>
+						<label>Titulo chiste</label> <br/>
+						<input type="text" name="titulo" size="50" maxlength="50" placeholder="Titulo de chiste" required="required" /> 
+						<br/>
+						<label>Chiste</label> <br/>
+						<textarea name="chiste" rows="5" cols="100" maxlength="500" placeholder="Chiste" required="required" ></textarea>
+					</fieldset>
+					<input type="submit" value="Enviar">
+					<input type="reset" value="Deshacer">       
+					</form>
+				</article>

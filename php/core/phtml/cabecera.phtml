@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+        <script async type="text/javascript" src="js/ejer_1.js"></script>
+        <!-- <script type="text/javascript" src="js/ejer_2.js"></script> -->
+        <!-- <script async type="text/javascript" src="js/ejer_3.js"></script> -->
+        <script type="text/javascript" src="js/ejer_4.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+
+        <title>votamigatito.com</title>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="dark-primary-color top-bar">
+                <div class="top-bar-left">
+                    <ul class="menu">
+                        <li class="menu-text"><a href="http://al187142.al.nisu.org/pr_5/Portal_MVC.php">Votamigatito.com</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="top-bar-right">
+                    <ul class="menu">
+                        <li class="dropdown">
+                        	<a>Identificar</a>
+                        	<div class="dropdown-content">
+                        		<form method="POST" action="?modulo=loguear" encypte="multipart/form-data">	
+                        			<label>Nombre usuario</label>
+                        			<br/>
+                        			<input type="text" name="nombre" size="25" maxlength="50" placeholder="Nombre usuario" required="required">
+                        			<br/>
+                        			<label>Contraseña</label>
+                        			<br/>
+                        			<input type="password" name="contrasenya" size="25" maxlength="25" placeholder="Contraseña" required="required">
+                        			<br/><br/>
+                        			<input type="submit" value="Identificar">
+                        			<input type="reset" value="Cancelar">
+                        			<br/>
+                        		</form>
+                        	</div>
+                        </li>
+                        <li><a href="?modulo=registrar">Registrarse</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="default-primary-color jokes">
+                <span>Chiste: </span><span id="joke"></span>
+            </div>
+        </header>

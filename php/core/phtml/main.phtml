@@ -1,0 +1,29 @@
+            <article class="container">
+                <div class="cajaNoGusta">
+                    
+                    <ul id="ejer_2">
+                        <li>
+                            <h2 id="titulo"><?php _H($rows[0]['nombre']); ?></h2>
+                        </li>
+                        <li>
+                            <button id="botonImprimir" onclick="nuevaVentana();">Imprimir</button>
+                        </li>
+                    </ul>
+
+                        <span id="muestraUrl"></span>
+                </div>
+                <div class="cajaImagen">
+                    <img id="imagen" src="<?php _H($rows[0]['ubicacion']); ?>" alt="imagen gatito rockero">
+                </div>
+                <div class="cajaGusta">
+                    <form action="?modulo=votar" method="POST" enctype="multipart/form-data" id="formMeGusta">
+                        <!-- &#128576; &#128574; &#128570; &#128571; son emoticonos -->
+                        <input type="text" name="nombreImagen" value="" id="nombreImagenVoto" style="display: none;">
+                        <input type="text" name="botonPulsado" value="" id="botonPulsado" style="display: none;">
+                        <input id="btnPeor" type="submit" name="peor" class="flex-item gusta-action-button gusta-animate gusta-red" value="¡Es horrible! &#128576;">
+                        <input id="btnMala" type="submit" name="mala" class="flex-item gusta-action-button gusta-animate gusta-yellow" value="No me gusta &#128574;"></input>
+                        <input id="btnBuena" type="submit" name="buena" class="flex-item gusta-action-button gusta-animate gusta-blue" value="Me gusta &#128570;"></input>
+                        <input id="btnMejor" type="submit" name="mejor" class="flex-item gusta-action-button gusta-animate gusta-green" value="Es adorable! &#128571;"></input>
+                    </form>
+                </div>
+            </article>

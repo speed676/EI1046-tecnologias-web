@@ -1,0 +1,21 @@
+				<article class="container">
+ 					<form action="<?php _H($data['action'])?>" method="POST" enctype="multipart/form-data">
+    				<h2>Nuevo registro</h2>
+    				<fieldset>
+						<label>Nombre Usuario</label> <br/>
+						<input type="text" name="nombre" size="25" maxlength="50" placeholder="Nombre de usuario" /> 
+						<br/>
+						<label>Contraseña</label> <br/>
+						<input type="password" name="contrasenya" size="25" maxlength="25" placeholder="Contraseña" />
+						<br/>
+						<label>Repite contraseña</label> <br/>
+						<input type="password" name="contrasenya2" size="25" maxlength="25" placeholder="Contraseña" />
+						<br/>
+						<label for="email">Email</label> <br/>
+						<input type="email" name="email" size="25" maxlength="50" placeholder="pp@pp.pp" /> 
+						<br/>		  
+					</fieldset>
+					<input type="submit" value="Enviar">
+					<input type="reset" value="Deshacer">       
+					</form>
+				</article>

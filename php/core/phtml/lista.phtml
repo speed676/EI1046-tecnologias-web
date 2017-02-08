@@ -1,0 +1,14 @@
+        <div class="main">
+        	<nav class="default-primary-color">
+    			<h3>Top gatuno!</h3>
+				<ul class="listTop">
+
+				<?php
+				for($i=0;$i<count($data["top"]);$i++) { ?>
+        			
+        			<li><a data-ajax="false" href="?modulo=imagen&imagen=<?php _H($data["top"][$i]["nombre"]); ?>"><?php _H($data["top"][$i]["nombre"]); ?><span class="result"><?php _H($data["top"][$i]["mejor"]); ?></span></a></li>
+
+        		<?php } ?>
+        			
+   				</ul>
+			</nav>  

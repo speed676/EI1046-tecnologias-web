@@ -1,0 +1,14 @@
+            <article class="container">
+                <h2> <?php _H($data["subtitulo"])?> </h2> 
+                <table>
+                    <?php foreach($rows as  $row) {?>
+                        <?php foreach($row as  $key=>$val) {?>
+                            <tr><td><?php _H($key); echo(": ") ;_H($val); ?></td></tr>
+                        <?php }?>
+                        <tr>
+                            <td><a href="<?php _H('?modulo=user&peticion=update_contrasenya');?>" ><button>Cambiar contrasenya</button></a></td>
+                            <td><a href="<?php _H('?modulo=user&peticion=update_email');?>" ><button>Cambiar email</button></a></td>
+                        </tr>
+                    <?php }?>
+                 </table>
+             </article>

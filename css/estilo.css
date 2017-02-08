@@ -1,0 +1,423 @@
+/***************************** Body *************************************/
+body {
+    font: 20px Helvetica;
+    margin: 0;
+}
+
+/**************************** Heaeder **********************************/
+header {
+    display: block;
+    min-height: 25px;
+    background: #eee;
+    text-align: center;
+}
+
+/*************************** main ***************************************/
+.main {
+    min-height: 800px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-flow: row;
+}
+
+.main > aside {
+    margin: 0;
+    padding: 5px;
+    border-right: 2px solid #BDBDBD;
+    border-top: 2px solid #BDBDBD;
+    border-radius: 0pt;
+    background: #ccccff;
+    flex: 1 6 15%;
+    order: 3;
+}
+
+.main > nav {
+    margin: 0;
+    padding: 0px;
+    border-right: 2px solid #BDBDBD;
+    border-top: 2px solid #BDBDBD;
+    border-radius: 0pt;
+    flex: 1 6 15%;
+    order: 1;
+    text-align: center;
+}
+
+.main > article {
+    margin: 0;
+    padding: 5px;
+    border-top: 2px solid #BDBDBD;
+    border-radius: 0pt;
+    flex: 3 1 70%;
+    order: 2;
+}
+
+/**************************************** Footer *************************/
+footer {
+    display: block;
+    margin: 0;
+    padding: 5px;
+    min-height: 50px;
+    border-top: 2px solid #BDBDBD;
+    border-radius: 0pt;
+    text-align: center;
+}
+
+
+/***************** Paletas de colores web *********************************/
+.dark-primary-color { 
+    background: #0288D1;
+}
+
+.default-primary-color { 
+    background: #03A9F4;
+}
+
+.light-primary-color { 
+    background: #B3E5FC;
+}
+
+.text-primary-color {
+    color: #FFFFFF;
+}
+
+.accent-color {
+    background: #FFC107;
+}
+
+.primary-text-color {
+    color: #212121;
+}
+
+.secondary-text-color {
+    color: #757575;
+}
+
+.divider-color {
+    border-color: #BDBDBD;
+}
+
+
+/******************************* Menú ************************************/
+/********* Los top bar sirven para dar estructura al menú ****************/
+.top-bar {
+    padding: 0.5rem;
+}
+
+/******** Los before y after sirven para insertar lo definido en la clase antes
+********* y después en las etiquetas con esta clase ****************************/
+.top-bar::before, 
+.top-bar::after {
+    content: ' ';
+    display: table;
+}
+
+.top-bar::after {
+    clear: both;
+}
+
+/* Esta clase css, la hemos dejado definida ya que en el futuro queremos meter inputs (un search por ejemplo) */
+.top-bar input {
+    max-width: 200px;
+    margin-right: 1rem;
+}
+
+.top-bar .input-group-field {
+    width: 100%;
+    margin-right: 0;
+}
+
+/* boton para el icono de buscar tamaño automatico */
+.top-bar input.button {
+    width: auto;
+}
+
+.top-bar .top-bar-left, 
+.top-bar .top-bar-right {
+    width: 100%;
+}
+.top-bar-title {
+    float: left;
+    margin-right: 1rem; /*rem: http://www.cristalab.com/tutoriales/las-medidas-em-y-rem-en-css3-c113125l/*/
+}
+
+/***************** left y right es para que centre a una esquina *************/
+.top-bar-left {
+    float: left;
+}
+
+.top-bar-right {
+    float: right;
+}
+
+/*****************************************************************************/
+.menu {
+    margin: 0;
+    list-style-type: none;
+}
+
+/*************** Las clases con > indica que todas las etiquetas li dentro ***
+**************** del menu tendrá esa estructura ******************************/
+.menu > li {
+    display: table-cell;
+    vertical-align: middle; 
+    display: table-cell;
+}
+
+.menu > li > a {
+    display: block;
+    padding: 0.7rem 1rem;
+    line-height: 1; 
+    text-decoration: underline;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+ /************** hover ---> da un estilo cuando el ratón pasa por encima ********/
+.menu > li > a:hover {
+    outline: 0;
+    background: #03A9F4;
+}
+
+.menu-text {
+    font-weight: bold;
+    color: inherit;
+    line-height: 1;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding: 0.7rem 1rem;
+ }
+ 
+
+/****************** Login ******************************************************/
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #B3E5FC;
+    min-width: 250px;
+}
+/*******************************************************************************/
+
+@media screen and (min-width: 40em) {
+    .top-bar .top-bar-left, .top-bar .top-bar-right {
+        width: auto;
+    }
+}
+  
+@media screen and (max-width: 63.9375em) {
+    .top-bar.stacked-for-medium .top-bar-left, .top-bar.stacked-for-medium .top-bar-right {
+        width: 100%;
+    }
+}
+ 
+@media screen and (max-width: 74.9375em) {
+    .top-bar.stacked-for-large .top-bar-left, .top-bar.stacked-for-large .top-bar-right {
+        width: 100%;
+    }
+}
+
+
+/******************************** Chistes ********************************************/
+.jokes{
+    min-height: 20px;
+    font-size: 24px;
+    font-family: cursive;
+    padding-bottom: 8px;
+    padding-top: 5px;
+}
+
+#joke{
+    color: #FFC107;
+}
+
+/**************************** Menu user admin *****************************************/
+.menuUserAdmin {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    margin-top: 0px;
+}
+
+.menuUserAdmin > li {
+    position: relative;
+    display: block;
+    text-align: center;
+    background: #03A9F4;
+}
+
+.menuUserAdmin > li > a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.menuUserAdmin > li > a:hover {
+    background: yellow;
+}
+
+.menuUserAdmin > li > a.text {
+    font-size: 150%;
+    background: #0288D1;
+    text-decoration: none;
+}
+
+
+/**************************** main -> columna lista ***********************************/
+.listTop {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.listTop > li {
+    position: relative;
+    display: block;
+    text-align: left;
+}
+
+.listTop > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: #FFFFFF;
+}
+
+ /************** hover ---> da un estilo cuando el ratón pasa por encima ***************/
+.listTop > li > a:hover {
+    text-decoration: none;
+    background-color: #FFC107;
+}
+
+/*********** Hacemos que el contenido con etiqueta span, declarado dentro de a y éste **
+************ dentro de li y a su vez dentro de listop, se centre a la derecha **********/
+.listTop > li > a > span {
+    float: right;
+}
+
+.result {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
+}
+
+
+/************************* main -> votar gato (contenedor) *****************************/
+.container{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/*************** Partimos la caja en tres partes ordenada verticalmente ****************/
+.container > .cajaNoGusta {
+    flex-flow: space-between;
+    flex: 3 1 50px;
+    order: 1;
+    max-height: 65px;
+}
+
+.container > .cajaNoGusta > ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+.container > .cajaNoGusta > ul > li {
+    display: table-cell;
+    vertical-align: middle; 
+    display: table-cell;
+}
+
+.container > .cajaImagen {
+    order: 2;
+}
+
+.container > .cajaGusta {
+    display: box;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    /*flex: 3 1 50px;*/
+    order: 3;
+    max-height: 100px
+}
+
+.container > .cajaImagen > img {
+    max-width:100%;
+}
+
+.container > .cajaGusta > .flex-item {
+    text-align: center;
+}
+
+.gusta-blue {
+    background-color: #3498DB;
+    border-bottom: 5px solid #2980B9;
+    text-shadow: 0px -2px #2980B9;
+}
+
+.gusta-red {
+    background-color: #E74C3C;
+    border-bottom: 5px solid #BD3E31;
+    text-shadow: 0px -2px #BD3E31;
+}
+
+.gusta-green {
+    background-color: #82BF56;
+    border-bottom: 5px solid #669644;
+    text-shadow: 0px -2px #669644;
+}
+
+.gusta-yellow {
+    background-color: #F2CF66;
+    border-bottom: 5px solid #D1B358;
+    text-shadow: 0px -2px #D1B358;
+}
+
+.gusta-animate {
+    transition: all 0.1s;
+}
+
+.gusta-action-button {
+    position: relative;
+    padding: 10px 40px;
+    margin: 0px 10px 10px 0px;
+    float: left;
+    border-radius: 10px;
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    color: #FFF;
+    text-decoration: none;  
+}
+
+
+/* Mensaje de error */
+.mensajeError {
+    color: red;
+}
+
+/* Algunas mejoras de diseÃ±o */
+@media all and(min-width: 600px) {
+    body{
+        min-width: 500px;   /* Tenemos 3 columnas en flex, el mÃ­nimo valor para q no se rompa es 500px */
+    }
+
+    aside{
+        display: none;  /* Es muy molesto el bloque de publicidad en mÃ³vil */
+    }
+}

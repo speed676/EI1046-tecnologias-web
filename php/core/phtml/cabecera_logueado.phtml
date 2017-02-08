@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="./css/estilo.css">
+
+        <script async type="text/javascript" src="js/ejer_1.js"></script>
+        <!-- <script type="text/javascript" src="js/ejer_2.js"></script> -->
+        <!-- <script async type="text/javascript" src="js/ejer_3.js"></script> -->
+        <script type="text/javascript" src="js/ejer_4.js"></script> 
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/mejoras.js"></script>
+
+        <title>votamigatito.com</title>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="dark-primary-color top-bar">
+                <div class="top-bar-left">
+                    <ul class="menu">
+                        <li class="menu-text"><a href="http://al187142.al.nisu.org/pr_5/Portal_MVC.php">Votamigatito.com</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="top-bar-right">
+                    <ul class="menu">
+                        <li class="my-a">Bienvenido Usuario: <?php _H($data["visitante"])?></li>
+                        <li class="my-a"><a href="?modulo=salir">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="default-primary-color jokes">
+                <span>Chiste: </span><span id="joke"></span>
+            </div>
+        </header>
